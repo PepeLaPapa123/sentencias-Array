@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  ARRAYS  -  VARIABLES DE MATRIZ</title>
+</head>
+<body>
+    <p>
+        como declarar ARRAYS
+        <h4 id="declarar_arrays"></h4>
+    </p>
+
+    <hr>
+    <p>
+        como obtener el primer elemento de un array
+        <h4 id="acceder_primer_elemento"></h4>
+    </p>
+
+    <hr>
+    <p>
+        como obtener la longitud de un array
+        <h4 id="longitud_array"></h4>
+
+    </p>
+
+    <hr>
+    <p>
+        como crear un bucle de array
+        <h4 id="bucle_array"></h4>
+
+    </p>
+
+    <hr>
+    <p>
+        como añadir un elemento final
+        <h4 id="añadir_elemento_final"></h4>
+    </p>
+
+    <hr>
+    <p>
+        ordenar un array de string
+        <h4 id="ordenar_array"></h4>
+        letras en orden
+        <h4 id="orden_letras"></h4>
+        letras en orden inverso
+        <h4 id="inverso_letras"></h4>
+    </p>
+
+    <hr>
+    <p>
+        crear numeros y ordenarlos
+        <h4 id="ver_array_numeros"></h4>
+    </p>
+
+<hr>
+<p>
+array ordenado
+<h4 id="orden_numeros"></h4>
+</p>
+
+</body>
+
+<script>
+    //como declarar un array. el id para referinos al innerHTML es declarar_arrays
+    var frutas = ["Manzana", "Kiwi", "Mango"]
+    document.getElementById("declarar_arrays").innerHTML = frutas;
+
+    //como obtener el primer elemento de un array
+    var primeras_frutas = frutas [0];
+    document.getElementById("acceder_primer_elemento").innerHTML = primeras_frutas
+
+    //como obtener la longitud de un array
+    var longitud_array = frutas.length;
+    document.getElementById("longitud_array").innerHTML = longitud_array;
+
+    //creae un bucle que imprima elementos del array
+    var valor_array = "";
+    for (i=0; i < frutas.length; i++) {
+        valor_array = valor_array + frutas[i] + "br";
+    }
+    document.getElementById("bucle_array").innerHTML = valor_array;
+
+//añadir un elemento final al array. metodo push
+frutas.push("kiwi dorado");
+document.getElementById("añadir_elemento_final").innerHTML = frutas;
+
+//ordenar arrays de tipo string
+var cba =["O", "U", "W", "M", "E", "U", "I", "B", "Y"];
+console.log(cba)
+document.getElementById("ordenar_array").innerHTML = cba
+var letras = cba.sort();
+document.getElementById("orden_letras").innerHTML = letras;
+var letras_inverso = cba.reverse();
+document.getElementById("inverso_letras").innerHTML = letras_inverso;
+
+//crear un array de numeros y luego ordenarlos
+var numeros = ["7", "1", "3", "2", "5", "7"]
+console.log(numeros);
+document.getElementById("ver_array_numeros").innerHTML = numeros;
+
+numeros_orden = numeros.sort();
+document.getElementById("orden_numeros").innerHTML = numeros_orden;
+
+</script>
+</html>
